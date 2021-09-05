@@ -3,7 +3,7 @@
 #04 09 2021
 
 ''' Escribir un programa que identifique el tipo de
-    exposicxión de una imagen <normal, sub o expuesta>. '''
+    exposición de una imagen <normal, sub o expuesta>. '''
 
 import cv2
 import numpy as np
