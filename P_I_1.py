@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-im = cv2.imread("connan.jpg")
+im = cv2.imread("Travieso_Scott.jpg")
 if im.size > 1000 * 600:
     im = cv2.resize(im, None, fx=0.5, fy=0.5)
 
@@ -39,11 +39,8 @@ else:
 
 cv2.putText(ig, 'CP', (50,200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 5)
 
-cv2.imshow('image0',ig)
+cv2.imshow('image0',im)
 
 fig= plt.figure()
 plt.bar(range(len(hist)),hist)
 plt.show()
-
-cv2.imshow("Image", im)
-cv2.waitKey(0)
