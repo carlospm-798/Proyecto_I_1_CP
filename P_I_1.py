@@ -9,9 +9,13 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-im = cv2.imread("Travieso_Scott.jpg")
-if im.size > 1000 * 600:
+im = cv2.imread("Jessy.png")
+[O,P] = im.shape[0:2]
+
+if int(O*P) > 1200500:
     im = cv2.resize(im, None, fx=0.5, fy=0.5)
+elif int(O*P) < 160000:
+    im = cv2.resize(im, None, fx=1.2, fy=1.2)
 
 ig = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
 [M,N] = ig.shape[0:2]
