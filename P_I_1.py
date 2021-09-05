@@ -25,19 +25,21 @@ if maxElement == 4 and hist[4] > 0.3:
     print('Imagen sobreexpuesta')
     cv2.putText(ig, 'Imagen sobreexpuesta', (50,100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 5)
     im_eq = cv2.equalizeHist(ig)
+    cv2.putText(im_eq, 'CP', (50,200), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 5)
     cv2.imshow("imagen ecualizada", im_eq)
     #
 elif maxElement == 0 and hist[0] > 0.3:
     print('Imagen subexpuesta')
-    cv2.putText(ig, 'Imagen subexpuesta', (50,100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 5)
-    im_eq2 = cv2.equalizeHist(ig)
-    cv2.imshow("Imagen ecualizada", im_eq2)
+    cv2.putText(ig, 'Imagen subexpuesta', (50,100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 5)
+    im_eq = cv2.equalizeHist(ig)
+    cv2.putText(im_eq, 'CP', (50,200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 5)
+    cv2.imshow("Imagen ecualizada", im_eq)
     #
 else:
     print('Buena exposición')
     cv2.putText(ig, 'expuesta normal', (50,100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 5)
 
-cv2.putText(ig, 'CP', (50,200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 5)
+cv2.putText(im, 'CP', (50,200), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 5)
 
 cv2.imshow('image0',im)
 
